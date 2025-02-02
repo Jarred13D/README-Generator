@@ -1,44 +1,59 @@
 // TODO: Include packages needed for this application
-import generateMarkdown from 'generateMarddown.js';
+import generateMarkdown from './utils/generateMarkdown.js';
 import inquirer from 'inquirer';
 import colors from 'colors';
-import fs, { write } from "fs";
-import Choices from 'inquirer/lib/objects/choices';
+import fs from 'fs';
 
 // TODO: Create an array of questions for user input
-const questions = [
+const questions = [];
+    inquirer
+    .prompt([
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project?'
+        message: 'What is the title of your project? '
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Give a brief description of your project.'
+        message: 'Give a brief description of your project: '
     },
     {
         type: 'input',
         name: 'installation',
-        message: 'What are the steps required to install this project?'
+        message: 'What are the steps required to install this project? '
     },
     {
         type: 'input',
         name: 'dependencies',
-        message: 'Provide a list of required dependencies for this project.'
+        message: 'Provide a list of required dependencies for this project: '
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'licenses',
         message: 'Please select the license you would like to use',
-        Choices: ['MIT License', 'BSD 2-Clause License', 'BSD 3-Clause License', 'Apache License 2.0', 'Mozilla Public License 2.0', 'GNU General Public License v3.0', 'Boost Software License 1.0', 'The Unlicense']
+        choices: ['MIT License', 'Apache License 2.0', 'BSD 3-Clause License', 'Mozilla Public License 2.0', 'GNU General Public License v3.0', 'The Unlicense']
     },
     {
         type: 'input',
         name: 'author',
-        message: 'List the contributing author(s) of this project. Include name(s) and email(s)'
+        message: 'List the contributing author(s) of this project. Include name(s) and email(s): '
     },
-];
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Please provide your GitHub username: '
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter your email address: '
+    }
+])
+    .then((answers) => {
+        const readMe = generateMarkdown(answers);
+        writeToFile('README.md', readMe);
+    })
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -52,13 +67,13 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {
-    inquirer
-    .prompt(questions)
-    .then((data) => {
-        writeToFile("generated-readme/Generated-READMe.md", generateMarkdown(data));
-    });
-}
+function init() {}
+   // inquirer
+   // .prompt(questions)
+   // .then((data) => {
+   //     writeToFile("generated-readme/README.md", generateMarkdown(data));
+   // });
+// }
 
 // Function call to initialize app
 init();
