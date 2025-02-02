@@ -29,15 +29,15 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'author',
-        message: 'List the contributing author(s) of this project.'
-    },
-    {
-        type: 'input',
         name: 'licenses',
         message: 'Please select the license you would like to use',
         Choices: ['MIT License', 'BSD 2-Clause License', 'BSD 3-Clause License', 'Apache License 2.0', 'Mozilla Public License 2.0', 'GNU General Public License v3.0', 'Boost Software License 1.0', 'The Unlicense']
-    }
+    },
+    {
+        type: 'input',
+        name: 'author',
+        message: 'List the contributing author(s) of this project. Include name(s) and email(s)'
+    },
 ];
 
 // TODO: Create a function to write README file
