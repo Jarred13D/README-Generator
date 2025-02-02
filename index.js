@@ -2,7 +2,7 @@
 import generateMarkdown from 'generateMarddown.js';
 import inquirer from 'inquirer';
 import colors from 'colors';
-import fs from "fs";
+import fs, { write } from "fs";
 import Choices from 'inquirer/lib/objects/choices';
 
 // TODO: Create an array of questions for user input
@@ -52,7 +52,13 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+    .prompt(questions)
+    .then((data) => {
+        writeToFile("generated-readme/Generated-READMe.md", generateMarkdown(data));
+    });
+}
 
 // Function call to initialize app
 init();
