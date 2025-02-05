@@ -37,7 +37,7 @@ const questions = [];
     {
         type: 'input',
         name: 'author',
-        message: 'List the contributing author(s) of this project. Include name(s) and email(s): '
+        message: 'List the contributing author(s) of this project: '
     },
     {
         type: 'input',
@@ -51,8 +51,39 @@ const questions = [];
     }
 ])
     .then((answers) => {
-        const readMe = generateMarkdown(answers);
-        writeToFile('README.md', readMe);
+        const readMe = `
+        #${answers.title}
+
+        -----------------------------------------
+
+        ## [Description](#description)
+        ${answers.description}
+
+        -----------------------------------------
+
+        ## [Installation](#installation)
+        ${answers.installation}
+
+        -----------------------------------------
+
+        ## [Dependencies](#dependencies)
+        ${answers.dependencies}
+
+        -----------------------------------------
+
+        ## [Author](#author)
+        ${answers.author}
+        ${answers.github}
+        ${answers.email}
+
+        -----------------------------------------
+
+        ## [License](#licenses)
+        ${answers.licenses}
+        `;
+        
+        generateMarkdown(answers);
+        writeToFile('generated-readme/README.md', readMe);
     })
 
 // TODO: Create a function to write README file

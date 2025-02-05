@@ -43,14 +43,12 @@ function renderLicenseSection(license) {
     return "";
   } else {
     return (`This project is licensed under the ${license}.`)
-
-}}
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
+  return `# ${data.title}`;
 }
 
 export default generateMarkdown;
