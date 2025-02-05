@@ -18,6 +18,10 @@ npm install  # or pip install -r requirements.txt (if using Python)
 
 Follow the prompts to generate your `README.md`.
 
+## Walkthrough Guide
+
+https://app.screencastify.com/v3/watch/hlBhrv1WaqhZDYiFKL3O
+
 ## License
 This project is licensed under the [MIT License](LICENSE).
 

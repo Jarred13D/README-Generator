@@ -1,41 +1,39 @@
 
-        #README-Generator
+        #README Generator
 
         -----------------------------------------
 
-        ## [Description](description)
+        ## [Description]
         This command-line application will generate a README.md file
 
         -----------------------------------------
 
-        ## [Installation](#installation)
-        Clone the repository, cd into the repo directory, and run code .
+        ## [Installation])
+        clone repository, cd into README-Generator
 
         -----------------------------------------
 
         ## [Usage](#usage)
-        Usage for this project is to help users dynamically create README files on the go
+        Utilize this application to dynamically create a professional README
 
         -----------------------------------------
 
-        ## [Contributing](#contribution)
-        undefined
-        Jarred13D
-        jarred.c.hampton@gmail.com
+        ## [Contributing]
+        Pull requests are welcome. Submit an issue for any major changes
 
         -----------------------------------------
 
-        ## [Tests](#tests)
-        Opening the command-line application, running node index.js and following prompts to input information
+        ## [Tests]
+        Running node index.js and going through the prompted questions
 
         -----------------------------------------
 
-        ## [License](#licenses)
-        undefined
+        ## [License]
+        MIT License
 
         -----------------------------------------
 
-        ## [Questions](#email)
+        ## [Questions]
         GitHub Username: Jarred13D
         Feel free to reach me at jarred.c.hampton@gmail.com with any questions.
         
