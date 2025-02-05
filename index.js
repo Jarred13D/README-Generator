@@ -25,8 +25,8 @@ const questions = [];
     },
     {
         type: 'input',
-        name: 'dependencies',
-        message: 'Provide a list of required dependencies for this project: '
+        name: 'usage',
+        message: 'Provide usage information related to this project: '
     },
     {
         type: 'list',
@@ -36,8 +36,13 @@ const questions = [];
     },
     {
         type: 'input',
-        name: 'author',
-        message: 'List the contributing author(s) of this project: '
+        name: 'contribution',
+        message: 'List the contribution guidelines: '
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Please provide test instructions: '
     },
     {
         type: 'input',
@@ -66,20 +71,32 @@ const questions = [];
 
         -----------------------------------------
 
-        ## [Dependencies](#dependencies)
-        ${answers.dependencies}
+        ## [Usage](#usage)
+        ${answers.usage}
 
         -----------------------------------------
 
-        ## [Author](#author)
+        ## [Contributing](#contribution)
         ${answers.author}
         ${answers.github}
         ${answers.email}
 
         -----------------------------------------
 
+        ## [Tests](#tests)
+        ${answers.tests}
+
+        -----------------------------------------
+
         ## [License](#licenses)
-        ${answers.licenses}
+        ${answers.license}
+
+        -----------------------------------------
+
+        ## [Questions](#email)
+        GitHub Username: ${answers.github}
+
+        Feel free to reach me at ${answers.email} with any questions.
         `;
         
         generateMarkdown(answers);
