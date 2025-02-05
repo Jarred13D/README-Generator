@@ -66,7 +66,7 @@ const questions = [];
 
         -----------------------------------------
 
-        ## [Installation])
+        ## [Installation]
         ${answers.installation}
 
         -----------------------------------------
