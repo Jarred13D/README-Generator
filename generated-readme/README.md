@@ -3,35 +3,39 @@
 
         -----------------------------------------
 
-        ## [Description](#description)
-        The README.md Generator is a command-line tool that helps developers quickly generate
+        ## [Description](description)
+        This command-line application will generate a README.md file
 
         -----------------------------------------
 
         ## [Installation](#installation)
-        Clone the repository to your local machine. CD to the repo directory and then install inquirer and colors node modules.
+        Clone the repository, cd into the repo directory, and run code .
 
         -----------------------------------------
 
         ## [Usage](#usage)
-        To use this generator, in your integrated terminal, run node index.js
+        Usage for this project is to help users dynamically create README files on the go
 
         -----------------------------------------
 
         ## [Contributing](#contribution)
         undefined
-        jarred13d
-        jhampton@gmail.com
+        Jarred13D
+        jarred.c.hampton@gmail.com
 
         -----------------------------------------
 
         ## [Tests](#tests)
-        this is what i put in usage
+        Opening the command-line application, running node index.js and following prompts to input information
+
+        -----------------------------------------
+
+        ## [License](#licenses)
+        undefined
 
         -----------------------------------------
 
         ## [Questions](#email)
-        GitHub Username: jarred13d
-
-        Feel free to reach me at jhampton@gmail.com with any questions.
+        GitHub Username: Jarred13D
+        Feel free to reach me at jarred.c.hampton@gmail.com with any questions.
         

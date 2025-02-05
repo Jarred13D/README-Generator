@@ -61,12 +61,12 @@ const questions = [];
 
         -----------------------------------------
 
-        ## [Description](#description)
+        ## [Description]
         ${answers.description}
 
         -----------------------------------------
 
-        ## [Installation](#installation)
+        ## [Installation])
         ${answers.installation}
 
         -----------------------------------------
@@ -76,26 +76,23 @@ const questions = [];
 
         -----------------------------------------
 
-        ## [Contributing](#contribution)
-        ${answers.author}
-        ${answers.github}
-        ${answers.email}
+        ## [Contributing]
+        ${answers.contribution}
 
         -----------------------------------------
 
-        ## [Tests](#tests)
+        ## [Tests]
         ${answers.tests}
 
         -----------------------------------------
 
-        ## [License](#licenses)
-        ${answers.license}
+        ## [License]
+        ${answers.licenses}
 
         -----------------------------------------
 
-        ## [Questions](#email)
+        ## [Questions]
         GitHub Username: ${answers.github}
-
         Feel free to reach me at ${answers.email} with any questions.
         `;
         
